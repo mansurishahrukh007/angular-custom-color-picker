@@ -1,0 +1,21 @@
+<p>
+  St art editing to see some magic happen :)
+</p>
+<form #form="ngForm">
+  <label> Name: </label>
+  <input type="text" name="name"[(ngModel)]="name" required>  
+ 
+  <label> Color: </label>
+  <app-color-picker 
+  [colors]="['#55acee','#cbca94','#008080']"
+  name="color"
+  [(ngModel)]="color"
+  ></app-color-picker>
+
+<p> Selected color is: {{color}}</p>
+
+<p>Form value: </p>
+<pre> {{form.value | json}} </pre>
+
+<button [disabled]="form.pristine || form.invalid">Submit</button>
+</form>

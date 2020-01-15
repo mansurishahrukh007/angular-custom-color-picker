@@ -1,0 +1,11 @@
+.color {
+  display: inline-block;
+  padding: 15px 15px;
+  margin-right: 4px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.color.selected {
+  border: 2px solid black;
+}
